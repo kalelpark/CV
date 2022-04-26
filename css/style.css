@@ -57,14 +57,21 @@ header {
     align-items: center;
 }
 
+
 .head-container .head-brand {
     font-weight: bold;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .head-container .head-blog {
     font-weight: bold;
     font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.link-tree:hover{
+    color : #b7d557;
 }
 
 section {
@@ -298,6 +305,44 @@ footer {
     color : #545e6f;
     margin : 0 0.5rem;
 }
+
+#backtotop {
+    background-color: rgb(47, 48, 89);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    border-radius: 20px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition-property: background-color, opacity, visibility;
+    transition-duration : 0.3s, 0.5s, 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+/* backtotop::after를 활용하여, 앞에 content를 표시하는 것이다. */
+#backtotop::after{
+    content: "\f077";
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    line-height: 40px;
+    color:#fff;
+}
+
+#backtotop.show:hover{
+    cursor: pointer;
+    background-color: #2186c4;
+}
+
+#backtotop.show {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(47, 48, 49);
+}
+
 
 @media only screen and (min-width : 1200px) {
     .inner {
