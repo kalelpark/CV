@@ -306,7 +306,7 @@ footer {
     margin : 0 0.5rem;
 }
 
-#backtotop {
+#backtotop{
     background-color: rgb(47, 48, 89);
     width: 40px;
     height: 40px;
@@ -317,19 +317,18 @@ footer {
     bottom: 30px;
     right: 30px;
     transition-property: background-color, opacity, visibility;
-    transition-duration : 0.3s, 0.5s, 0.5s;
+    transition-duration: 0.3s, 0.5s, 0.5s;
     opacity: 0;
     visibility: hidden;
     z-index: 999;
 }
 
-/* backtotop::after를 활용하여, 앞에 content를 표시하는 것이다. */
-#backtotop::after{
+#backtotop::after {
     content: "\f077";
     font-family: FontAwesome;
     font-size: 1.5rem;
     line-height: 40px;
-    color:#fff;
+    color: #fff;
 }
 
 #backtotop.show:hover{
@@ -340,8 +339,9 @@ footer {
 #backtotop.show {
     opacity: 1;
     visibility: visible;
-    background-color: rgb(47, 48, 49);
+    background-color: rgb(47, 48, 89);
 }
+
 
 
 @media only screen and (min-width : 1200px) {
